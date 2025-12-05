@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Notas</title>
+
+    <!-- SheetJS para leitura do Excel -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 650px;
+            padding: 0 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type=file] {
+            margin-bottom: 20px;
+        }
+
+        button {
+            cursor: pointer;
+            background: #2d72d9;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #1f56a8;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            background: #f7f7f7;
+        }
+
+        .erro {
+            color: #a80000;
+            font-weight: bold;
+        }
+
+        .aprovado {
+            color: #0a8a0a;
+            font-weight: bold;
+        }
+
+        .reprovado {
+            color: #c00000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Consulta de Notas</h1>
+
+    <div class="card">
+        <label><strong>Carregar planilha Excel (todas as turmas)</strong></label><br>
+        <input type="file" id="inputExcel" accept=".xlsx, .xls">
+
+        <hr>
+
+        <label>Informe sua matrícula:</label><br><br>
+        <input type="text" id="matricula" placeholder="Digite a matrícula">
+        <button onclick="consultar()">Consultar</button>
+
+        <div id="resultado" class="result"></div>
+    </div>
+
+    <script>
+        let alunos = [];  // Catálogo único gerado após o upload do Excel
+
+        document.getElementById("inputExcel").addEventListener("change", function (event) {
+            const file = event.target.files[0];
+
+            if (!file) return;
+
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: "array" });
+
+                alunos = []; // Resetar ao carregar nova planilha
+
+                workbook.SheetNames.forEach(turma => {
+                    const worksheet = workbook.Sheets[turma];
+                    const json = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
+
+                    json.forEach(linha => {
+                        alunos.push({
+                            turma: turma,
+                            matricula: String(linha.Matricula).trim(),
+                            nome: linha.Nome,
+                            n1: linha.Nota1,
+                            n2: linha.Nota2,
+                            n3: linha.Nota3,
+                            n4: linha.Nota4,
+                            media: linha.Média || linha.Media
+                        });
+                    });
+                });
+
+                alert("Planilha carregada com sucesso!");
+            };
+
+            reader.readAsArrayBuffer(file);
+        });
+
+        function consultar() {
+            const mat = document.getElementById("matricula").value.trim();
+            const resultado = document.getElementById("resultado");
+
+            if (alunos.length === 0) {
+                resultado.innerHTML = "<p class='erro'>A planilha ainda não foi carregada.</p>";
+                return;
+            }
+
+            if (mat === "") {
+                resultado.innerHTML = "<p class='erro'>Digite uma matrícula válida.</p>";
+                return;
+            }
+
+            const aluno = alunos.find(a => a.matricula === mat);
+
+            if (!aluno) {
+                resultado.innerHTML = "<p class='erro'>Matrícula não encontrada.</p>";
+                return;
+            }
+
+            const situacao = aluno.media >= 6 ? 
+                "<span class='aprovado'>Aprovado</span>" : 
+                "<span class='reprovado'>Reprovado</span>";
+
+            resultado.innerHTML = `
+                <p><strong>Nome:</strong> ${aluno.nome}</p>
+                <p><strong>Turma:</strong> ${aluno.turma}</p>
+                <p><strong>Nota 1:</strong> ${aluno.n1}</p>
+                <p><strong>Nota 2:</strong> ${aluno.n2}</p>
+                <p><strong>Nota 3:</strong> ${aluno.n3}</p>
+                <p><strong>Nota 4:</strong> ${aluno.n4}</p>
+                <p><strong>Média:</strong> ${aluno.media}</p>
+                <p><strong>Situação:</strong> ${situacao}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
