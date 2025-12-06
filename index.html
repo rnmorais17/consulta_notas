@@ -1,292 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Consulta de Notas por Matrícula</title>
-  <style>
-    /* Estilo simples e limpo */
-    :root { --bg:#f7f8fa; --card:#fff; --muted:#666; --accent:#0b6efd; --danger:#d23; }
-    html,body { height:100%; margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#111; }
-    .wrap { max-width:900px; margin:32px auto; padding:20px; }
-    header { margin-bottom:18px; }
-    h1 { margin:0 0 6px; font-size:20px; }
-    p.lead { margin:0; color:var(--muted); font-size:13px; }
-    .card { background:var(--card); border-radius:12px; padding:18px; box-shadow: 0 6px 18px rgba(22,28,37,0.06); }
-    .controls { display:flex; gap:8px; margin-top:12px; align-items:center; flex-wrap:wrap; }
-    input[type="text"] { padding:10px 12px; border-radius:8px; border:1px solid #e0e6ef; min-width:220px; font-size:14px; }
-    button { padding:10px 12px; border-radius:8px; border:0; background:var(--accent); color:#fff; cursor:pointer; font-size:14px; }
-    button.secondary { background:#e8eefc; color:var(--accent); border:1px solid rgba(11,110,237,0.12); }
-    .meta { margin-top:12px; color:var(--muted); font-size:13px; }
-    .result { margin-top:18px; }
-    .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
-    .field { min-width:120px; padding:10px 12px; background:#fafbff; border-radius:8px; border:1px dashed #eef2ff; font-size:14px; }
-    table { width:100%; border-collapse:collapse; margin-top:12px; }
-    th,td { text-align:left; padding:8px 10px; border-bottom:1px solid #f1f3f6; font-size:14px; }
-    .status { font-weight:700; padding:6px 10px; border-radius:8px; display:inline-block; }
-    .approved { background: #e6faec; color:#07864b; }
-    .reproved { background: #fff0f0; color:var(--danger); }
-    .small { font-size:12px; color:var(--muted); }
-    footer { margin-top:18px; font-size:12px; color:var(--muted); }
-    @media (max-width:560px){ .controls{ flex-direction:column; align-items:stretch } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Notas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 450px;
+            background: #fff;
+            margin: auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            background: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #005fa3;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eef;
+            border-left: 4px solid #0077cc;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Consulta de Notas por Matrícula</h1>
-      <p class="lead">Digite sua matrícula e clique em consultar. As planilhas de turmas ficam na pasta <code>/dados/</code> do repositório.</p>
-    </header>
+    
+    <div class="container">
+        <h2>Consulta de Notas</h2>
 
-    <div class="card" id="app">
-      <div>
-        <label class="small">Matrícula</label>
-        <div class="controls">
-          <input id="matriculaInput" type="text" placeholder="Ex: 2023001" autocomplete="off" />
-          <button id="consultBtn">Consultar</button>
-          <button id="reloadBtn" class="secondary" title="Recarregar dados">Recarregar dados</button>
-          <div style="flex:1"></div>
-          <div id="dataStatus" class="small" aria-live="polite">Carregando lista de planilhas...</div>
-        </div>
-      </div>
+        <label for="turma">Turma</label>
+        <select id="turma">
+            <option value="">Carregando...</option>
+        </select>
 
-      <div class="result" id="resultArea" aria-live="polite"></div>
+        <label for="matricula">Matrícula</label>
+        <input id="matricula" type="text" placeholder="Digite a matrícula">
 
-      <div class="meta" id="metaInfo">
-        <p class="small">Observações: a média exibida é a média presente na planilha quando disponível. A situação é calculada com critério de aprovação média >= 6.</p>
-      </div>
+        <button onclick="consultar()">Consultar</button>
+
+        <div id="resultado"></div>
     </div>
 
-    <footer>
-      <p class="small">Instruções rápidas: coloque arquivos .xlsx/.xls na pasta <code>/dados/</code> do repositório. Para facilitar, adicione também <code>/dados/files.json</code> com um array JSON listando os nomes dos arquivos. Ex: <code>["turmaA.xlsx","turmaB.xlsx"]</code>.</p>
-    </footer>
-  </div>
+    <script>
+        async function carregarDados() {
+            try {
+                const resp = await fetch('dados.json', { cache: 'no-store' });
+                const dados = await resp.json();
+                window.baseDeDados = dados;
 
-  <!-- SheetJS (XLSX) via CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+                const selectTurma = document.getElementById('turma');
+                selectTurma.innerHTML = '<option value="">Selecione...</option>';
 
-  <script>
-  (function(){
-    // ---------- CONFIGURAÇÃO RÁPIDA ----------
-    // Se você não criar /dados/files.json, edite a lista abaixo com os nomes dos arquivos de planilha.
-    const embeddedFiles = []; // Ex: ["turmaA.xlsx","turmaB.xlsx"]
-    const dadosFolder = '/dados/'; // pasta no GitHub Pages onde as planilhas estarão
-    const arquivosJsonPath = '/dados/files.json'; // caminho preferencial para a lista
-    const criterioAprovacao = 6; // média >= 6 => aprovado
+                Object.keys(dados).forEach(turma => {
+                    const opt = document.createElement('option');
+                    opt.value = turma;
+                    opt.textContent = turma;
+                    selectTurma.appendChild(opt);
+                });
 
-    // ---------- ESTADO ----------
-    let allStudents = []; // catálogo unificado: { matricula, nome, notas:[], media:Number, turma }
-    let filesList = []; // nomes dos arquivos a serem baixados
-    const dataStatusEl = document.getElementById('dataStatus');
-    const resultArea = document.getElementById('resultArea');
-    const consultBtn = document.getElementById('consultBtn');
-    const reloadBtn = document.getElementById('reloadBtn');
-    const inputMat = document.getElementById('matriculaInput');
-
-    // Util: limpa e mostra mensagem
-    function showMessage(html, isError=false){
-      resultArea.innerHTML = '<div class="card" style="margin-top:12px; padding:12px;">' + html + '</div>';
-      if(isError) resultArea.querySelector('.card').style.border = '1px solid #ffd6d6';
-    }
-    function clearResult(){ resultArea.innerHTML = ''; }
-
-    // Tenta buscar /dados/files.json, senão usa embeddedFiles
-    async function loadFilesList(){
-      dataStatusEl.textContent = 'Buscando lista de planilhas...';
-      filesList = [];
-      try {
-        const resp = await fetch(arquivosJsonPath, {cache:'no-store'});
-        if(resp.ok){
-          const arr = await resp.json();
-          if(Array.isArray(arr) && arr.length){
-            filesList = arr.slice();
-            dataStatusEl.textContent = `Encontrados ${filesList.length} arquivo(s) declarados em /dados/files.json`;
-            return;
-          }
+            } catch (e) {
+                console.error('Erro ao carregar dados.json', e);
+                alert('Erro ao carregar os dados. Verifique o arquivo dados.json no repositório.');
+            }
         }
-      } catch(e){}
-      // fallback para embedded
-      if(embeddedFiles && embeddedFiles.length){
-        filesList = embeddedFiles.slice();
-        dataStatusEl.textContent = `Usando lista embutida com ${filesList.length} arquivo(s).`;
-        return;
-      }
-      // última tentativa: tentar listar via fetch de /dados/ index (GitHub Pages não lista diretórios normalmente)
-      // Sem lista, informar professor para criar files.json ou editar embeddedFiles.
-      dataStatusEl.textContent = 'Nenhuma lista de arquivos encontrada. Edite files.json em /dados/ ou a variável embeddedFiles no HTML.';
-      filesList = [];
-    }
 
-    // Busca e processa todos os arquivos listados
-    async function loadAllSheets(){
-      allStudents = [];
-      if(!filesList.length){
-        dataStatusEl.textContent = 'Sem arquivos para carregar.';
-        return;
-      }
-      dataStatusEl.textContent = `Carregando ${filesList.length} arquivo(s)...`;
-      for (const fileName of filesList){
-        const path = dadosFolder + fileName;
-        dataStatusEl.textContent = `Carregando ${fileName} ...`;
-        try {
-          const resp = await fetch(path);
-          if(!resp.ok) {
-            console.warn('Falha ao baixar', path, resp.status);
-            continue;
-          }
-          const arrayBuffer = await resp.arrayBuffer();
-          const workbook = XLSX.read(arrayBuffer, {type:'array'});
-          // cada aba é uma turma? O nome da planilha de cada arquivo corresponde à turma (nome do arquivo)
-          const turmaName = stripExtension(fileName);
-          workbook.SheetNames.forEach(sheetName => {
-            const ws = workbook.Sheets[sheetName];
-            if(!ws) return;
-            const json = XLSX.utils.sheet_to_json(ws, {defval: ''});
-            // Esperamos colunas: Matricula | Nome | Nota1 | Nota2 | Nota3 | Nota4 | Média
-            json.forEach(row => {
-              // Normalizar chaves possíveis (variações de maiúsculas/minúsculas)
-              const r = normalizeRow(row);
-              if(!r.matricula && !r.nome) return;
-              const notas = [
-                parseNumberOrNull(r.nota1),
-                parseNumberOrNull(r.nota2),
-                parseNumberOrNull(r.nota3),
-                parseNumberOrNull(r.nota4)
-              ];
-              const mediaPlanilha = parseNumberOrNull(r.media);
-              // calcular média se média ausente ou inválida
-              const mediaCalculada = averageOrNull(notas);
-              const mediaFinal = (typeof mediaPlanilha === 'number' && !isNaN(mediaPlanilha)) ? mediaPlanilha : mediaCalculada;
-              allStudents.push({
-                matricula: String(r.matricula).trim(),
-                nome: String(r.nome).trim(),
-                notas: notas.map(n => (typeof n === 'number' ? n : null)),
-                media: (typeof mediaFinal === 'number' && !isNaN(mediaFinal)) ? round2(mediaFinal) : null,
-                turma: turmaName,
-                fonteAba: sheetName,
-                fonteArquivo: fileName
-              });
-            });
-          });
-        } catch(err){
-          console.error('Erro ao ler planilha', fileName, err);
+        function consultar() {
+            const turma = document.getElementById('turma').value;
+            const matricula = document.getElementById('matricula').value.trim();
+            const res = document.getElementById('resultado');
+
+            if (!turma || !matricula) {
+                alert('Selecione a turma e digite a matrícula.');
+                return;
+            }
+
+            const lista = window.baseDeDados[turma];
+            const aluno = lista.find(a => String(a.Matricula) === matricula);
+
+            if (!aluno) {
+                res.style.display = 'block';
+                res.innerHTML = 'Matrícula não encontrada.';
+                return;
+            }
+
+            const media = aluno.Media || aluno.Média || aluno.media || 0;
+            const situacao = media >= 6 ? 'Aprovado' : 'Reprovado';
+
+            res.style.display = 'block';
+            res.innerHTML = `
+                Nome: <strong>${aluno.Nome}</strong><br>
+                Média: <strong>${media}</strong><br>
+                Situação: <strong>${situacao}</strong>
+            `;
         }
-      }
-      dataStatusEl.textContent = `Dados carregados. Total de registros: ${allStudents.length}.`;
-    }
 
-    // Helpers
-    function stripExtension(fn){ return fn.replace(/\.[^/.]+$/, ''); }
-    function parseNumberOrNull(v){
-      if(v === null || v === undefined || v === '') return null;
-      // aceitar vírgula decimal
-      if(typeof v === 'string') v = v.replace(',', '.').replace(/\s+/g,'');
-      const num = Number(v);
-      return Number.isFinite(num) ? num : null;
-    }
-    function averageOrNull(arr){
-      const nums = arr.filter(v => typeof v === 'number' && !isNaN(v));
-      if(!nums.length) return null;
-      const s = nums.reduce((a,b)=>a+b,0);
-      return s / nums.length;
-    }
-    function round2(n){ return Math.round((n + Number.EPSILON) * 100) / 100; }
+        window.onload = carregarDados;
+    </script>
 
-    // Normaliza possíveis variações de nomes de colunas
-    function normalizeRow(row){
-      const out = {};
-      for(const k of Object.keys(row)){
-        const nk = k.toString().trim().toLowerCase();
-        const val = row[k];
-        if(/matricul|matrícula|matr/.test(nk)) out.matricula = val;
-        else if(/^nome$/.test(nk) || /aluno/.test(nk)) out.nome = val;
-        else if(/nota\s*1|nota1|n1/.test(nk)) out.nota1 = val;
-        else if(/nota\s*2|nota2|n2/.test(nk)) out.nota2 = val;
-        else if(/nota\s*3|nota3|n3/.test(nk)) out.nota3 = val;
-        else if(/nota\s*4|nota4|n4/.test(nk)) out.nota4 = val;
-        else if(/média|media|mean/.test(nk)) out.media = val;
-        else {
-          // manter original caso queira consulta posterior
-          out[nk] = val;
-        }
-      }
-      return out;
-    }
-
-    // Busca por matrícula (exata)
-    function findByMatricula(matricula){
-      if(!matricula) return [];
-      const m = String(matricula).trim();
-      return allStudents.filter(s => String(s.matricula).trim() === m);
-    }
-
-    function renderStudentList(list, matricula){
-      if(!list.length){
-        showMessage(`<div><strong>Matrícula ${escapeHtml(matricula)}</strong> não encontrada. Verifique e tente novamente.</div>`);
-        return;
-      }
-      // Pode haver múltiplos registros com mesma matrícula (ex: várias turmas). Mostrar todas.
-      let html = `<div><strong>Resultados para matrícula ${escapeHtml(matricula)}</strong></div>`;
-      list.forEach(s => {
-        html += `<div style="margin-top:12px; padding:12px; border-radius:10px; background:#fff; box-shadow:0 4px 10px rgba(12,18,28,0.04)">`;
-        html += `<div class="row"><div style="flex:1"><div style="font-weight:700">${escapeHtml(s.nome || '(sem nome)')}</div><div class="small">Turma: ${escapeHtml(s.turma)} — Fonte: ${escapeHtml(s.fonteArquivo)} / aba: ${escapeHtml(s.fonteAba)}</div></div>`;
-        const sit = (typeof s.media === 'number' && !isNaN(s.media) && s.media >= criterioAprovacao) ? 'Aprovado' : 'Reprovado';
-        html += `<div><span class="status ${sit==='Aprovado' ? 'approved' : 'reproved'}">${sit}</span></div></div>`;
-        html += `<table><thead><tr><th>Nota 1</th><th>Nota 2</th><th>Nota 3</th><th>Nota 4</th><th>Média</th></tr></thead><tbody>`;
-        html += `<tr><td>${formatVal(s.notas[0])}</td><td>${formatVal(s.notas[1])}</td><td>${formatVal(s.notas[2])}</td><td>${formatVal(s.notas[3])}</td><td style="font-weight:700">${s.media !== null ? s.media.toFixed(2) : '—'}</td></tr>`;
-        html += `</tbody></table>`;
-        html += `</div>`;
-      });
-      showMessage(html);
-    }
-
-    function formatVal(v){ return (typeof v === 'number' && !isNaN(v)) ? v.toFixed(2) : '—'; }
-
-    function escapeHtml(s){
-      if(s === null || s === undefined) return '';
-      return String(s).replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]; });
-    }
-
-    // Inicialização completa: carregar lista e depois arquivos
-    async function initLoad(){
-      clearResult();
-      await loadFilesList();
-      if(filesList.length) {
-        await loadAllSheets();
-      } else {
-        dataStatusEl.textContent = 'Nenhum arquivo carregado. Configure /dados/files.json ou embeddedFiles.';
-      }
-    }
-
-    // Eventos
-    consultBtn.addEventListener('click', () => {
-      const m = inputMat.value.trim();
-      if(!m){ showMessage('<div>Informe a matrícula antes de consultar.</div>', true); return; }
-      const found = findByMatricula(m);
-      renderStudentList(found, m);
-    });
-    inputMat.addEventListener('keydown', (e)=>{ if(e.key === 'Enter') consultBtn.click(); });
-    reloadBtn.addEventListener('click', async ()=> {
-      dataStatusEl.textContent = 'Recarregando...';
-      await initLoad();
-    });
-
-    // Execução inicial
-    initLoad();
-
-    // Expor alguns utilitários para debug no console
-    window._consultaNotas = {
-      getAll: ()=>allStudents,
-      getFilesList: ()=>filesList,
-      reload: initLoad
-    };
-
-  })();
-  </script>
 </body>
 </html>
-
-
-
-
-
