@@ -3,742 +3,1126 @@
     {
       "Matricula": "202511540002",
       "Nome": "Adriele Conceição Santos",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 6.6,
-      "Média": 6.9
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "6.6",
+      "Média": "6.9"
     },
     {
       "Matricula": "202511540032",
       "Nome": "Adriele Pires Soares",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511540006",
       "Nome": "Alan Robert Porto Silva",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 6,
-      "Nota4": 5.2,
-      "Média": 6.3
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "6",
+      "Nota4": "5.2",
+      "Média": "6.3"
     },
     {
       "Matricula": "202511540034",
       "Nome": "Alexandre Lil Ferreira de Souza",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 6,
-      "Nota4": 5.6,
-      "Média": 6.4
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "6",
+      "Nota4": "5.6",
+      "Média": "6.4"
     },
     {
       "Matricula": "202511540056",
       "Nome": "Anthony Felipe Pinheiro da Silva",
-      "Nota1": 6,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 6.2,
-      "Média": 6.55
+      "Nota1": "6",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "6.2",
+      "Média": "6.55"
     },
     {
       "Matricula": "202511540023",
       "Nome": "Anthony Rodrigues de Souza",
-      "Nota1": 6,
-      "Nota2": 5,
-      "Nota3": 7,
-      "Nota4": 6.2,
-      "Média": 6.05
+      "Nota1": "6",
+      "Nota2": "5",
+      "Nota3": "7",
+      "Nota4": "6.2",
+      "Média": "6.05"
     },
     {
       "Matricula": "202511540029",
       "Nome": "Breno Gabriel Domingos Dias",
-      "Nota1": 6,
-      "Nota2": 5,
-      "Nota3": 7,
-      "Nota4": 2,
-      "Média": 5
+      "Nota1": "6",
+      "Nota2": "5",
+      "Nota3": "7",
+      "Nota4": "2",
+      "Média": "5"
     },
     {
       "Matricula": "202511540046",
       "Nome": "Camily Vitória Doarte de Souza",
-      "Nota1": 9,
-      "Nota2": 9,
-      "Nota3": 9,
-      "Nota4": 8.8,
-      "Média": 8.95
+      "Nota1": "9",
+      "Nota2": "9",
+      "Nota3": "9",
+      "Nota4": "8.8",
+      "Média": "8.95"
     },
     {
       "Matricula": "202511540007",
       "Nome": "David de Freitas Pereira",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511540071",
       "Nome": "Elenn Roana Aguiar da Silva",
-      "Nota1": 8.5,
-      "Nota2": 7.5,
-      "Nota3": 6,
-      "Nota4": 5.6,
-      "Média": 6.9
+      "Nota1": "8.5",
+      "Nota2": "7.5",
+      "Nota3": "6",
+      "Nota4": "5.6",
+      "Média": "6.9"
     },
     {
       "Matricula": "202511540020",
       "Nome": "Eloisa Alcantara Lima",
-      "Nota1": 6,
-      "Nota2": 2,
-      "Nota3": 3,
-      "Nota4": 0,
-      "Média": 2.75
+      "Nota1": "6",
+      "Nota2": "2",
+      "Nota3": "3",
+      "Nota4": "0",
+      "Média": "2.75"
     },
     {
       "Matricula": "202511540025",
       "Nome": "Emanueli Alves da Silva",
-      "Nota1": 6,
-      "Nota2": 6,
-      "Nota3": 6,
-      "Nota4": 2,
-      "Média": 5
+      "Nota1": "6",
+      "Nota2": "6",
+      "Nota3": "6",
+      "Nota4": "2",
+      "Média": "5"
     },
     {
       "Matricula": "202511540003",
       "Nome": "Emily Ferreira Pacheco",
-      "Nota1": 8.5,
-      "Nota2": 9.5,
-      "Nota3": 9,
-      "Nota4": 2,
-      "Média": 7.25
+      "Nota1": "8.5",
+      "Nota2": "9.5",
+      "Nota3": "9",
+      "Nota4": "2",
+      "Média": "7.25"
     },
     {
       "Matricula": "202511540042",
       "Nome": "Enila Karoline Cruz de Lima",
-      "Nota1": 10,
-      "Nota2": 10,
-      "Nota3": 9.5,
-      "Nota4": 8.8,
-      "Média": 9.575
+      "Nota1": "10",
+      "Nota2": "10",
+      "Nota3": "9.5",
+      "Nota4": "8.8",
+      "Média": "9.575"
     },
     {
       "Matricula": "202511540010",
       "Nome": "Fabricio Rodrigues de Andrade",
-      "Nota1": 6,
-      "Nota2": 6,
-      "Nota3": 6,
-      "Nota4": 6.6,
-      "Média": 6.15
+      "Nota1": "6",
+      "Nota2": "6",
+      "Nota3": "6",
+      "Nota4": "6.6",
+      "Média": "6.15"
     },
     {
       "Matricula": "202511540031",
       "Nome": "Gabriel Sanches",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511540059",
       "Nome": "Guilherme Mendes Oliveira",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511540033",
       "Nome": "Heloisa Farias Nora",
-      "Nota1": 7,
-      "Nota2": 8,
-      "Nota3": 8,
-      "Nota4": 5,
-      "Média": 7
+      "Nota1": "7",
+      "Nota2": "8",
+      "Nota3": "8",
+      "Nota4": "5",
+      "Média": "7"
     },
     {
       "Matricula": "202511540027",
       "Nome": "Henrique Ruiz de Morais Souza",
-      "Nota1": 7,
-      "Nota2": 6,
-      "Nota3": 6,
-      "Nota4": 6.4,
-      "Média": 6.35
+      "Nota1": "7",
+      "Nota2": "6",
+      "Nota3": "6",
+      "Nota4": "6.4",
+      "Média": "6.35"
     },
     {
       "Matricula": "202511540030",
       "Nome": "Hércules Nascimento da Silva",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511540001",
       "Nome": "Heriky Kieper Sousa",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 6.2,
-      "Média": 6.8
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "6.2",
+      "Média": "6.8"
     },
     {
       "Matricula": "202511540070",
       "Nome": "Hillary Pereira Loureiro Franco",
-      "Nota1": 8.5,
-      "Nota2": 9,
-      "Nota3": 9,
-      "Nota4": 9,
-      "Média": 8.875
+      "Nota1": "8.5",
+      "Nota2": "9",
+      "Nota3": "9",
+      "Nota4": "9",
+      "Média": "8.875"
     },
     {
       "Matricula": "202511540026",
       "Nome": "Isabelly Firmino da Cruz",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511540013",
       "Nome": "Itamara Costacurta Schmitt",
-      "Nota1": 7,
-      "Nota2": 6,
-      "Nota3": 8,
-      "Nota4": 7,
-      "Média": 7
+      "Nota1": "7",
+      "Nota2": "6",
+      "Nota3": "8",
+      "Nota4": "7",
+      "Média": "7"
     },
     {
       "Matricula": "202511540008",
       "Nome": "Julia Emanuelly de Castro Barbosa",
-      "Nota1": 7,
-      "Nota2": 3,
-      "Nota3": 7,
-      "Nota4": 7,
-      "Média": 6
+      "Nota1": "7",
+      "Nota2": "3",
+      "Nota3": "7",
+      "Nota4": "7",
+      "Média": "6"
     },
     {
       "Matricula": "202511540022",
       "Nome": "Juliana Carmerinda Martins",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 5.5,
-      "Média": 6.875
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "5.5",
+      "Média": "6.875"
     },
     {
       "Matricula": "202511540017",
       "Nome": "Kemilly Karoline dos Santos",
-      "Nota1": 8,
-      "Nota2": 9,
-      "Nota3": 9,
-      "Nota4": 6,
-      "Média": 8
+      "Nota1": "8",
+      "Nota2": "9",
+      "Nota3": "9",
+      "Nota4": "6",
+      "Média": "8"
     },
     {
       "Matricula": "202511540028",
       "Nome": "Kethlynn Alves Augusto",
-      "Nota1": 6,
-      "Nota2": 6,
-      "Nota3": 6,
-      "Nota4": 6,
-      "Média": 6
+      "Nota1": "6",
+      "Nota2": "6",
+      "Nota3": "6",
+      "Nota4": "6",
+      "Média": "6"
     },
     {
       "Matricula": "202511540011",
       "Nome": "Leidi Laura Nogueira Moreira",
-      "Nota1": 7,
-      "Nota2": 5,
-      "Nota3": 8,
-      "Nota4": 6,
-      "Média": 6.5
+      "Nota1": "7",
+      "Nota2": "5",
+      "Nota3": "8",
+      "Nota4": "6",
+      "Média": "6.5"
     },
     {
       "Matricula": "202511540015",
       "Nome": "Lucas Coelho de Freitas",
-      "Nota1": 8,
-      "Nota2": 5,
-      "Nota3": 6,
-      "Nota4": 5.4,
-      "Média": 6.1
+      "Nota1": "8",
+      "Nota2": "5",
+      "Nota3": "6",
+      "Nota4": "5.4",
+      "Média": "6.1"
     },
     {
       "Matricula": "202511540014",
       "Nome": "Mariana Damasceno Gazoni",
-      "Nota1": 7,
-      "Nota2": 4,
-      "Nota3": 6,
-      "Nota4": 7,
-      "Média": 6
+      "Nota1": "7",
+      "Nota2": "4",
+      "Nota3": "6",
+      "Nota4": "7",
+      "Média": "6"
     },
     {
       "Matricula": "202511540009",
       "Nome": "Mariana Vieira da Silva",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511540024",
       "Nome": "Maria Vitoria dos Santos Nekel",
-      "Nota1": 7,
-      "Nota2": 8,
-      "Nota3": 9,
-      "Nota4": 7.5,
-      "Média": 7.875
+      "Nota1": "7",
+      "Nota2": "8",
+      "Nota3": "9",
+      "Nota4": "7.5",
+      "Média": "7.875"
     },
     {
       "Matricula": "202511540072",
       "Nome": "Murilo Medina Reis Neri",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511540018",
       "Nome": "Nathalya Rodrigues Koch",
-      "Nota1": 7,
-      "Nota2": 8,
-      "Nota3": 8,
-      "Nota4": 7.8,
-      "Média": 7.7
+      "Nota1": "7",
+      "Nota2": "8",
+      "Nota3": "8",
+      "Nota4": "7.8",
+      "Média": "7.7"
     },
     {
       "Matricula": "202511540005",
       "Nome": "Pablo de Sousa Giasson",
-      "Nota1": 8,
-      "Nota2": 9,
-      "Nota3": 9,
-      "Nota4": 8,
-      "Média": 8.5
+      "Nota1": "8",
+      "Nota2": "9",
+      "Nota3": "9",
+      "Nota4": "8",
+      "Média": "8.5"
     },
     {
       "Matricula": "202511540064",
       "Nome": "Sarah Cristina Soares Baldaia",
-      "Nota1": 8,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 5.6,
-      "Média": 7.15
+      "Nota1": "8",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "5.6",
+      "Média": "7.15"
     },
     {
       "Matricula": "202511540019",
       "Nome": "Sofia Rafaela dos Santos Leal",
-      "Nota1": 6,
-      "Nota2": 6,
-      "Nota3": 6,
-      "Nota4": 6.8,
-      "Média": 6.2
+      "Nota1": "6",
+      "Nota2": "6",
+      "Nota3": "6",
+      "Nota4": "6.8",
+      "Média": "6.2"
     },
     {
       "Matricula": "202511540021",
       "Nome": "Tainara Carmaci Pereira",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 5.8,
-      "Média": 6.95
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "5.8",
+      "Média": "6.95"
     },
     {
       "Matricula": "202511540036",
       "Nome": "Vítor Robledo Schwingel",
-      "Nota1": 6,
-      "Nota2": 6,
-      "Nota3": 6,
-      "Nota4": 8,
-      "Média": 6.5
+      "Nota1": "6",
+      "Nota2": "6",
+      "Nota3": "6",
+      "Nota4": "8",
+      "Média": "6.5"
     },
     {
       "Matricula": "202511540012",
       "Nome": "Wagnner Ezequiel Ribeiro Mamore",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 6.4,
-      "Média": 6.85
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "6.4",
+      "Média": "6.85"
     },
     {
       "Matricula": "202511540016",
       "Nome": "Wender Gabriel Rosa dos Santos",
-      "Nota1": 6,
-      "Nota2": 6,
-      "Nota3": 6,
-      "Nota4": 6,
-      "Média": 6
+      "Nota1": "6",
+      "Nota2": "6",
+      "Nota3": "6",
+      "Nota4": "6",
+      "Média": "6"
     },
     {
       "Matricula": "202511540004",
       "Nome": "Yasmim Vitória da Silva Pereira",
-      "Nota1": 7,
-      "Nota2": 8,
-      "Nota3": 8,
-      "Nota4": 6.5,
-      "Média": 7.375
+      "Nota1": "7",
+      "Nota2": "8",
+      "Nota3": "8",
+      "Nota4": "6.5",
+      "Média": "7.375"
     }
   ],
   "1_ANO_B": [
     {
       "Matricula": "202511550002",
       "Nome": "Ágatha Nascimento Ribeiro",
-      "Nota1": 7,
-      "Nota2": 5,
-      "Nota3": 7,
-      "Nota4": 7,
-      "Média": 6.5
+      "Nota1": "7",
+      "Nota2": "5",
+      "Nota3": "7",
+      "Nota4": "7",
+      "Média": "6.5"
     },
     {
       "Matricula": "202511550018",
       "Nome": "Amanda Vitória Rodrigues da Silva",
-      "Nota1": 7,
-      "Nota2": 5,
-      "Nota3": 6,
-      "Nota4": 9,
-      "Média": 6.75
+      "Nota1": "7",
+      "Nota2": "5",
+      "Nota3": "6",
+      "Nota4": "9",
+      "Média": "6.75"
     },
     {
       "Matricula": "202511550038",
       "Nome": "Ana Clara Fernandes de Souza",
-      "Nota1": 7.5,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 6,
-      "Média": 6.875
+      "Nota1": "7.5",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "6",
+      "Média": "6.875"
     },
     {
       "Matricula": "202511550007",
       "Nome": "Ana Clara Hasse Americo",
-      "Nota1": 7,
-      "Nota2": 6,
-      "Nota3": 7,
-      "Nota4": 7,
-      "Média": 6.75
+      "Nota1": "7",
+      "Nota2": "6",
+      "Nota3": "7",
+      "Nota4": "7",
+      "Média": "6.75"
     },
     {
       "Matricula": "202511550014",
       "Nome": "Ana Clara Miranda da Silva",
-      "Nota1": 7,
-      "Nota2": 6,
-      "Nota3": 6,
-      "Nota4": 7.5,
-      "Média": 6.625
+      "Nota1": "7",
+      "Nota2": "6",
+      "Nota3": "6",
+      "Nota4": "7.5",
+      "Média": "6.625"
     },
     {
       "Matricula": "202511550004",
       "Nome": "Andressa Santos de Abreu",
-      "Nota1": 7,
-      "Nota2": 6,
-      "Nota3": 7,
-      "Nota4": 6,
-      "Média": 6.5
+      "Nota1": "7",
+      "Nota2": "6",
+      "Nota3": "7",
+      "Nota4": "6",
+      "Média": "6.5"
     },
     {
-      "Matricula": 202511550011,
+      "Matricula": "202511550011",
       "Nome": "Arthur Rocha Figueiredo",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 10,
-      "Média": 8
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "10",
+      "Média": "8"
     },
     {
-      "Matricula": 202511550012,
+      "Matricula": "202511550012",
       "Nome": "Augusto Kessler da Silva Monteiro",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 10,
-      "Média": 8
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "10",
+      "Média": "8"
     },
     {
       "Matricula": "202511550006",
       "Nome": "Emanuelly Lopes dos Santos",
-      "Nota1": 8.5,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 8.4,
-      "Média": 7.975
+      "Nota1": "8.5",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "8.4",
+      "Média": "7.975"
     },
     {
       "Matricula": "202511550052",
       "Nome": "Emilly Vitoria Protazio da Cruz",
-      "Nota1": 8,
-      "Nota2": 8,
-      "Nota3": 8,
-      "Nota4": 10,
-      "Média": 8.5
+      "Nota1": "8",
+      "Nota2": "8",
+      "Nota3": "8",
+      "Nota4": "10",
+      "Média": "8.5"
     },
     {
       "Matricula": "202511550061",
       "Nome": "Estefany Gomes Ribeiro",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511550019",
       "Nome": "Everton Matheus Jucá dos Santos",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 9,
-      "Média": 7.75
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "9",
+      "Média": "7.75"
     },
     {
       "Matricula": "202511550015",
       "Nome": "Felipe Gabriel de Oliveira Romao",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 5.4,
-      "Média": 6.6
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "5.4",
+      "Média": "6.6"
     },
     {
       "Matricula": "202511550010",
       "Nome": "Fernando Narzzetti Xavier",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 5.5,
-      "Média": 6.875
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "5.5",
+      "Média": "6.875"
     },
     {
       "Matricula": "202511550026",
       "Nome": "Geanny Gabriely Almeida de Lima",
-      "Nota1": 7,
-      "Nota2": 5,
-      "Nota3": 7,
-      "Nota4": 5.6,
-      "Média": 6.15
+      "Nota1": "7",
+      "Nota2": "5",
+      "Nota3": "7",
+      "Nota4": "5.6",
+      "Média": "6.15"
     },
     {
       "Matricula": "202511550024",
       "Nome": "Henrique Gabriel dos Santos de Sousa",
-      "Nota1": 6,
-      "Nota2": 6,
-      "Nota3": 8,
-      "Nota4": 7.8,
-      "Média": 6.95
+      "Nota1": "6",
+      "Nota2": "6",
+      "Nota3": "8",
+      "Nota4": "7.8",
+      "Média": "6.95"
     },
     {
       "Matricula": "202511550066",
       "Nome": "Ingrid Irene Inácio dos Santos",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511550037",
       "Nome": "Ingridy Beatriz Araujo de Assis",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511550034",
       "Nome": "Joao Henrique Rodrigues dos Santos",
-      "Nota1": 7.5,
-      "Nota2": 8,
-      "Nota3": 8,
-      "Nota4": 8.4,
-      "Média": 7.975
+      "Nota1": "7.5",
+      "Nota2": "8",
+      "Nota3": "8",
+      "Nota4": "8.4",
+      "Média": "7.975"
     },
     {
       "Matricula": "202511550013",
       "Nome": "João Pedro Ventura da Silva",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511550044",
       "Nome": "João Vytor Feitoza dos Santos",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 8,
-      "Média": 7.25
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "8",
+      "Média": "7.25"
     },
     {
       "Matricula": "202511550008",
       "Nome": "Julia de Souza de Jesus",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511550030",
       "Nome": "Kael dos Santos de Oliveira",
-      "Nota1": 8,
-      "Nota2": 8,
-      "Nota3": 9,
-      "Nota4": 10,
-      "Média": 8.75
+      "Nota1": "8",
+      "Nota2": "8",
+      "Nota3": "9",
+      "Nota4": "10",
+      "Média": "8.75"
     },
     {
       "Matricula": "202511550009",
       "Nome": "Luan Henrique Lopes França",
-      "Nota1": 7,
-      "Nota2": 6,
-      "Nota3": 7,
-      "Nota4": 7.8,
-      "Média": 6.95
+      "Nota1": "7",
+      "Nota2": "6",
+      "Nota3": "7",
+      "Nota4": "7.8",
+      "Média": "6.95"
     },
     {
       "Matricula": "202511550020",
       "Nome": "Luciana Teles Neuburg",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511550005",
       "Nome": "Marcello Brandao Menegatti",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 0,
-      "Média": 5.25
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "0",
+      "Média": "5.25"
     },
     {
       "Matricula": "202511550055",
       "Nome": "Maria Luiza do Nascimento Mata",
-      "Nota1": 7.5,
-      "Nota2": 8,
-      "Nota3": 8,
-      "Nota4": 8,
-      "Média": 7.875
+      "Nota1": "7.5",
+      "Nota2": "8",
+      "Nota3": "8",
+      "Nota4": "8",
+      "Média": "7.875"
     },
     {
       "Matricula": "202511550058",
       "Nome": "Mariana Cavalcante Neves",
-      "Nota1": 8,
-      "Nota2": 4,
-      "Nota3": 7,
-      "Nota4": 10,
-      "Média": 7.25
+      "Nota1": "8",
+      "Nota2": "4",
+      "Nota3": "7",
+      "Nota4": "10",
+      "Média": "7.25"
     },
     {
       "Matricula": "202511550028",
       "Nome": "Matheus Henryq Medeiros de Freitas",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 7,
-      "Nota4": 6,
-      "Média": 6.75
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "7",
+      "Nota4": "6",
+      "Média": "6.75"
     },
     {
       "Matricula": "202511550017",
       "Nome": "Natalia Ramos Bastard",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511550027",
       "Nome": "Nathaly Saueressig Santos",
-      "Nota1": 7,
-      "Nota2": 5,
-      "Nota3": 7,
-      "Nota4": 9.4,
-      "Média": 7.1
+      "Nota1": "7",
+      "Nota2": "5",
+      "Nota3": "7",
+      "Nota4": "9.4",
+      "Média": "7.1"
     },
     {
       "Matricula": "202511550025",
       "Nome": "Raícone Adelino Dionisio",
-      "Nota1": 9,
-      "Nota2": 9.5,
-      "Nota3": 9.5,
-      "Nota4": 10,
-      "Média": 9.5
+      "Nota1": "9",
+      "Nota2": "9.5",
+      "Nota3": "9.5",
+      "Nota4": "10",
+      "Média": "9.5"
     },
     {
       "Matricula": "202511550023",
       "Nome": "Rayka de Souza Silva",
-      "Nota1": 8,
-      "Nota2": 8,
-      "Nota3": 8,
-      "Nota4": 8.8,
-      "Média": 8.2
+      "Nota1": "8",
+      "Nota2": "8",
+      "Nota3": "8",
+      "Nota4": "8.8",
+      "Média": "8.2"
     },
     {
       "Matricula": "202511550016",
       "Nome": "Stephany Reinheimer Alcântara",
-      "Nota1": 8,
-      "Nota2": 8,
-      "Nota3": 8,
-      "Nota4": 7.5,
-      "Média": 7.875
+      "Nota1": "8",
+      "Nota2": "8",
+      "Nota3": "8",
+      "Nota4": "7.5",
+      "Média": "7.875"
     },
     {
       "Matricula": "202511550029",
       "Nome": "Suely de Araujo Lopes",
-      "Nota1": 0,
-      "Nota2": 0,
-      "Nota3": 0,
-      "Nota4": 0,
-      "Média": 0
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
     },
     {
       "Matricula": "202511550050",
       "Nome": "Thays do Nascimento Silva",
-      "Nota1": 7,
-      "Nota2": 5,
-      "Nota3": 7,
-      "Nota4": 8,
-      "Média": 6.75
+      "Nota1": "7",
+      "Nota2": "5",
+      "Nota3": "7",
+      "Nota4": "8",
+      "Média": "6.75"
     },
     {
       "Matricula": "202511550001",
       "Nome": "Vinicius Ribeiro Vieira",
-      "Nota1": 7,
-      "Nota2": 6,
-      "Nota3": 7,
-      "Nota4": 9.4,
-      "Média": 7.35
+      "Nota1": "7",
+      "Nota2": "6",
+      "Nota3": "7",
+      "Nota4": "9.4",
+      "Média": "7.35"
     },
     {
       "Matricula": "202511550022",
       "Nome": "Vitor Hugo Leme Silva",
-      "Nota1": 7,
-      "Nota2": 7,
-      "Nota3": 8,
-      "Nota4": 10,
-      "Média": 8
+      "Nota1": "7",
+      "Nota2": "7",
+      "Nota3": "8",
+      "Nota4": "10",
+      "Média": "8"
     },
     {
       "Matricula": "202511550003",
       "Nome": "Zen Alabden Hussain Jabr",
-      "Nota1": 7,
-      "Nota2": 5,
-      "Nota3": 8,
-      "Nota4": 7,
-      "Média": 6.75
+      "Nota1": "7",
+      "Nota2": "5",
+      "Nota3": "8",
+      "Nota4": "7",
+      "Média": "6.75"
+    }
+  ],
+  "Agro_FF": [
+    {
+      "Matricula": "202521940018",
+      "Nome": "Adriana Ferreira Soares Scariot",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202521940038",
+      "Nome": "Ana Gabriela Alves Silva",
+      "Nota1": "9.5",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9.5"
+    },
+    {
+      "Matricula": "202521940003",
+      "Nome": "Benhur Alcantara Hergesell",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202521940012",
+      "Nome": "Caio Cesar Moares Claudio Correia",
+      "Nota1": "9.5",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9.5"
+    },
+    {
+      "Matricula": "202521940015",
+      "Nome": "Cleia Moura Ferreira",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202511940001",
+      "Nome": "Estevan Xavier Ferreira",
+      "Nota1": "9.5",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9.5"
+    },
+    {
+      "Matricula": "202521940001",
+      "Nome": "Jaderson Renan dos Santos",
+      "Nota1": "9.5",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9.5"
+    },
+    {
+      "Matricula": "202521940008",
+      "Nome": "Jeisa Gomes Mataczinski",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202521940013",
+      "Nome": "Jhulya da Silva Gonçalves",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202521940034",
+      "Nome": "Natalia Roana Ferreira de Oliveira",
+      "Nota1": "9.5",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9.5"
+    },
+    {
+      "Matricula": "202521940023",
+      "Nome": "Odair José de Oliveira Queroz",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202511940002",
+      "Nome": "Patricia Veiga Fernandes",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202521940010",
+      "Nome": "Tania Granella da Silva",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202521940035",
+      "Nome": "Vitória Ribeiro Urcino",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    }
+  ],
+  "Log_FF": [
+    {
+      "Matricula": "202520760030",
+      "Nome": "Alex Brendo do Carmo Costa",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760006",
+      "Nome": "Alicy Caroline Rodrigues Prado",
+      "Nota1": "9.5",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9.5"
+    },
+    {
+      "Matricula": "202520760007",
+      "Nome": "Andre Honorio de Souza",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202520760005",
+      "Nome": "Bernadete Piran Costacurta",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760015",
+      "Nome": "Edilene Costa Silva",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760020",
+      "Nome": "Ester da Silva Aguiar",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760026",
+      "Nome": "Fernando Merchan Sanini",
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
+    },
+    {
+      "Matricula": "202520760013",
+      "Nome": "Lenifer Honório Kaczmarek",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760024",
+      "Nome": "Pedro Henrique Bernardo dos Santos",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760001",
+      "Nome": "Pedro Henrique Pereira Lima",
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
+    },
+    {
+      "Matricula": "202520760025",
+      "Nome": "Ryan da Costa Araujo",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760019",
+      "Nome": "Sunamita Sousa Silva",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760023",
+      "Nome": "Talita Cristina Almeida Patellini",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760011",
+      "Nome": "Thaina Soares do Nascimento",
+      "Nota1": "9.5",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9.5"
+    }
+  ],
+  "Log_FVPP": [
+    {
+      "Matricula": "202520760030",
+      "Nome": "Alex Brendo do Carmo Costa",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202520760006",
+      "Nome": "Alicy Caroline Rodrigues Prado",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202520760007",
+      "Nome": "Andre Honorio de Souza",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202520760005",
+      "Nome": "Bernadete Piran Costacurta",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760015",
+      "Nome": "Edilene Costa Silva",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760020",
+      "Nome": "Ester da Silva Aguiar",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760026",
+      "Nome": "Fernando Merchan Sanini",
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
+    },
+    {
+      "Matricula": "202520760013",
+      "Nome": "Lenifer Honório Kaczmarek",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202520760024",
+      "Nome": "Pedro Henrique Bernardo dos Santos",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202520760001",
+      "Nome": "Pedro Henrique Pereira Lima",
+      "Nota1": "0",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "0"
+    },
+    {
+      "Matricula": "202520760025",
+      "Nome": "Ryan da Costa Araujo",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202520760019",
+      "Nome": "Sunamita Sousa Silva",
+      "Nota1": "10",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "10"
+    },
+    {
+      "Matricula": "202520760023",
+      "Nome": "Talita Cristina Almeida Patellini",
+      "Nota1": "9",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9"
+    },
+    {
+      "Matricula": "202520760011",
+      "Nome": "Thaina Soares do Nascimento",
+      "Nota1": "9.5",
+      "Nota2": "0",
+      "Nota3": "0",
+      "Nota4": "0",
+      "Média": "9.5"
     }
   ]
 }
