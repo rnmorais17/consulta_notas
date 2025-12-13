@@ -2,28 +2,28 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Notas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f4f4f4;
+            background-color: #f4f6f8;
             padding: 20px;
         }
 
         .container {
-            max-width: 450px;
-            background: #fff;
+            max-width: 480px;
             margin: auto;
+            background: #ffffff;
             padding: 25px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         h2 {
-            margin-top: 0;
             text-align: center;
+            margin-bottom: 20px;
             color: #333;
         }
 
@@ -37,109 +37,131 @@
             width: 100%;
             padding: 10px;
             margin-top: 6px;
-            border: 1px solid #ccc;
             border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 15px;
         }
 
         button {
             width: 100%;
             margin-top: 20px;
             padding: 12px;
-            background: #0077cc;
+            background-color: #0077cc;
             color: white;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
             font-size: 16px;
+            cursor: pointer;
         }
 
         button:hover {
-            background: #005fa3;
+            background-color: #005fa3;
         }
 
         #resultado {
             margin-top: 20px;
             padding: 15px;
-            background: #eef;
+            background-color: #eef3ff;
             border-left: 4px solid #0077cc;
             border-radius: 5px;
             display: none;
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
-    
-    <div class="container">
-        <h2>Consulta de Notas</h2>
 
-        <label for="turma">Turma</label>
-        <select id="turma">
-            <option value="">Carregando...</option>
-        </select>
+<div class="container">
+    <h2>Consulta de Notas</h2>
 
-        <label for="matricula">Matrícula</label>
-        <input id="matricula" type="text" placeholder="Digite a matrícula">
+    <label for="turma">Turma</label>
+    <select id="turma">
+        <option value="">Carregando...</option>
+    </select>
 
-        <button onclick="consultar()">Consultar</button>
+    <label for="nomeAluno">Nome do aluno</label>
+    <input type="text" id="nomeAluno" placeholder="Digite o nome do aluno">
 
-        <div id="resultado"></div>
-    </div>
+    <button onclick="consultar()">Consultar</button>
 
-    <script>
-        async function carregarDados() {
-            try {
-                const resp = await fetch('dados.json', { cache: 'no-store' });
-                const dados = await resp.json();
-                window.baseDeDados = dados;
+    <div id="resultado"></div>
+</div>
 
-                const selectTurma = document.getElementById('turma');
-                selectTurma.innerHTML = '<option value="">Selecione...</option>';
+<script>
+    let baseDeDados = {};
 
-                Object.keys(dados).forEach(turma => {
-                    const opt = document.createElement('option');
-                    opt.value = turma;
-                    opt.textContent = turma;
-                    selectTurma.appendChild(opt);
-                });
+    async function carregarDados() {
+        try {
+            const resp = await fetch('dados.json', { cache: 'no-store' });
+            baseDeDados = await resp.json();
 
-            } catch (e) {
-                console.error('Erro ao carregar dados.json', e);
-                alert('Erro ao carregar os dados. Verifique o arquivo dados.json no repositório.');
-            }
+            const selectTurma = document.getElementById('turma');
+            selectTurma.innerHTML = '<option value="">Selecione a turma</option>';
+
+            Object.keys(baseDeDados).forEach(turma => {
+                const opt = document.createElement('option');
+                opt.value = turma;
+                opt.textContent = turma;
+                selectTurma.appendChild(opt);
+            });
+        } catch (e) {
+            alert('Erro ao carregar dados.json. Verifique o arquivo no repositório.');
+            console.error(e);
+        }
+    }
+
+    function normalizar(texto) {
+        return texto
+            .toString()
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .trim();
+    }
+
+    function consultar() {
+        const turma = document.getElementById('turma').value;
+        const nomeDigitado = normalizar(document.getElementById('nomeAluno').value);
+        const resultado = document.getElementById('resultado');
+
+        if (!turma || !nomeDigitado) {
+            alert('Selecione a turma e digite o nome do aluno.');
+            return;
         }
 
-        function consultar() {
-            const turma = document.getElementById('turma').value;
-            const matricula = document.getElementById('matricula').value.trim();
-            const res = document.getElementById('resultado');
+        const alunos = baseDeDados[turma];
+        const encontrados = alunos.filter(a =>
+            normalizar(a.Nome || a.nome).includes(nomeDigitado)
+        );
 
-            if (!turma || !matricula) {
-                alert('Selecione a turma e digite a matrícula.');
-                return;
-            }
-
-            const lista = window.baseDeDados[turma];
-            const aluno = lista.find(a => String(a.Matricula) === matricula);
-
-            if (!aluno) {
-                res.style.display = 'block';
-                res.innerHTML = 'Matrícula não encontrada.';
-                return;
-            }
-
-            const media = aluno.Media || aluno.Média || aluno.media || 0;
-            const situacao = media >= 6 ? 'Aprovado' : 'Reprovado';
-
-            res.style.display = 'block';
-            res.innerHTML = `
-                Nome: <strong>${aluno.Nome}</strong><br>
-                Média: <strong>${media}</strong><br>
-                Situação: <strong>${situacao}</strong>
-            `;
+        if (encontrados.length === 0) {
+            resultado.style.display = 'block';
+            resultado.innerHTML = 'Aluno não encontrado.';
+            return;
         }
 
-        window.onload = carregarDados;
-    </script>
+        if (encontrados.length > 1) {
+            resultado.style.display = 'block';
+            resultado.innerHTML =
+                '<strong>Mais de um aluno encontrado:</strong><br>' +
+                encontrados.map(a => a.Nome || a.nome).join('<br>');
+            return;
+        }
+
+        const aluno = encontrados[0];
+        const media = aluno.Media || aluno.Média || aluno.media || '—';
+        const situacao = media >= 6 ? 'Aprovado' : 'Reprovado';
+
+        resultado.style.display = 'block';
+        resultado.innerHTML = `
+            <strong>Nome:</strong> ${aluno.Nome || aluno.nome}<br>
+            <strong>Média:</strong> ${media}<br>
+            <strong>Situação:</strong> ${situacao}
+        `;
+    }
+
+    window.onload = carregarDados;
+</script>
 
 </body>
 </html>
